@@ -1,6 +1,5 @@
 # To Do List
 This 'To Do List' allows you to create tasks to complete, mark them as complete or uncomplete, and to delete a task.
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
 **Link to project:** Coming Soon...
 
