@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>To Do List</h1>
+
+        <ul class="todoItems">
+        <% for(let i=0; i < items.length; i++) {%>
+            <li class="item">
+                <span class="check"><input type="checkbox" id="<%= i %>-checkbox"></span>
+                <% if(items[i].completed === true) {%>
+                    <span class='completed'><%= items[i].thing %></span>
+                <% }else{ %>
+                    <span><%= items[i].thing %></span>
+                <% } %>    
+                    <span class='fa fa-trash'></span>
+            </li>
+        <% } %>
+        </ul>
+
+        <h2 class="leftToDo">Left to do: <%= left %></h2>
+
+        <form action="/addTodo" method="POST">
+            <input type="text" placeholder="Type a new task..." name="todoItem">
+            <button class="submit" type="submit" name="button">Submit</button>
+        </form>
+    
+
+        <script src='js/main.js'></script>
+    </body>
+</html>
